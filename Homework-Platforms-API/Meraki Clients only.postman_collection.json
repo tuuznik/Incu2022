@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "0fd48b4e-c04a-4bb4-b1a1-9ff130fc814a",
+		"name": "Meraki Clients only",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get clients for network",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{meraki_key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{meraki_base_url}}/networks/{{meraki_net_id}}/clients",
+					"protocol": "https",
+					"host": [
+						"{{meraki_base_url}}"
+					],
+					"path": [
+						"networks",
+						"{{meraki_net_id}}",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
